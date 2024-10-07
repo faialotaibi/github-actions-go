@@ -15,7 +15,7 @@ jobs:
           go-version: "^1.19"
 
       - name: build go
-        run: go build
+        run: go build hello.go
 
       - name: Runs Go
         run: go run hello.go
