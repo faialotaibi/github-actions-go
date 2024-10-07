@@ -1,17 +1,15 @@
-name: Build go 
+name: Build go
 
 on: [pull_request, push]
 
-
-jobs: 
+jobs:
   build-and-run:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
         with:
-          go-version: '^1.19'
+          go-version: "^1.19"
         run: |
-        go build -o hello hello.go
-        go run hello.go
-      
+          go build
+          go run hello.go
