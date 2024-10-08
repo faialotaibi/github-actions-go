@@ -1,7 +1,7 @@
-name: Build and Run Go Program
+name: test by Build and Run Go Program
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
@@ -21,9 +21,4 @@ jobs:
 
       - name: Build Go program
         run: |
-          go build hello.go
-
-      - name: Run Go program
-        run: |
-          ./hello
-
+          docker compose up
